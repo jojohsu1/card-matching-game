@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./app.js" async></script>
+    <title>Mix-Or-Match</title>
+</head>
+
+<body>
+    <div class="bauble">
+        <img class="bauble bauble-right" src="./images/bauble-red.png">
+        <img class="bauble bauble-small" src="./images/bauble-red.png">
+        <img class="bauble bauble-left" src="./images/bauble-red.png">
+        <img class="bauble bauble-one" src="./images/bauble.png">
+        <h1 class="title">Mix-Or-Match</h1>
+    </div>
+    <div class="overlay-text visible">Click to Start</div>
+    <div id="game-over-text" class="overlay-text">
+        GAME OVER<span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        VICTORY<span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Time <span id="time-remaining">100</span>
+            </div>
+            <div class="game-info">
+                Flips <span id="flips">0</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/snowman.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/snowman.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/snowflake.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/snowflake.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/santa-claus.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/santa-claus.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/reindeer.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/reindeer.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/mistletoe.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/mistletoe.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/christmas-tree.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/christmas-tree.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/bauble.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/bauble.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/angel.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="lights light-middle" src="./images/lights.png">
+                <img class="lights light-right" src="./images/lights.png">
+                <img class="lights light-left" src="./images/lights.png">
+                <img class="santa-claus" src="./images/santa-claus.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="snow snow-top-left" src="./images/snow.png">
+                <img class="snow snow-top-right" src="./images/snow.png">
+                <img class="snow snow-bottom-left" src="./images/snow.png">
+                <img class="snow snow-bottom-right" src="./images/snow.png">
+                <img class="card-value" src="./images/icons/angel.png">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

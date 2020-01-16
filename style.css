@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Mountains+of+Christmas|Open+Sans:700&display=swap');
+:root {
+    --dark-bg-color: #2F1200;
+    --light-bg-color: #824314;
+    --main-card-color: #875E2A;
+    --light-word-color: #C8A548;
+    --dark-word-color: #8F3600;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+    font-family: 'Open Sans', cursive;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, var(--dark-bg-color), var(--light-bg-color));
+}
+
+.title {
+    color: var(--light-word-color);
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 5em;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bauble-one {
+    position: absolute;
+    width: 55px;
+    height: auto;
+    top: 0;
+    left: 18px;
+    opacity: 1;
+}
+
+.bauble-small {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    top: 0;
+    right: -8px;
+    opacity: .7;
+}
+
+.bauble-left {
+    position: absolute;
+    width: 65px;
+    height: auto;
+    top: 0;
+    left: -15px;
+    opacity: .8;
+}
+
+.bauble-right {
+    position: absolute;
+    width: 90px;
+    height: auto;
+    top: 0;
+    right: -5px;
+    opacity: 1;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+    perspective: 500px;
+}
+
+.game-info-container {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.game-info {
+    color: var(--light-word-color);
+    font-size: 3em;
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+.card {
+    position: relative;
+    height: 175px;
+    width: 125px;
+    border-radius: 6px;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    transition: transform 500ms ease-in-out;
+}
+
+.card-back {
+    border-radius: 6px;
+    background: var(--main-card-color);
+}
+
+.card-front {
+    transform: rotateY(180deg);
+    background: var(--dark-word-color);
+    border-radius: 6px;
+}
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+    transform: rotateY(0);
+}
+
+.card.matched .card-value {
+    animation: dance 1s linear infinite 500ms;
+}
+
+.overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: var(--light-word-color);
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+.overlay-text:hover {
+    cursor: pointer;
+}
+
+.overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+}
+
+.overlay-text-small {
+    font-size: .3em;
+}
+
+@keyframes overlay-grow {
+    from {
+        background: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(47, 18, 0, 0.85);
+        font-size: 6em;
+    }
+}
+
+@keyframes dance {
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-20deg);
+    }
+    75% {
+        transform: rotate(20deg);
+    }
+}
+
+.santa-claus {
+    position: absolute;
+    width: 125px;
+    height: auto;
+    align-self: flex-end;
+    transform: translateY(62px);
+}
+
+.card-back:hover .santa-claus {
+    transform: translateY(28px);
+}
+
+.lights {
+    position: absolute;
+    width: 60px;
+    height: auto;
+}
+
+.light-middle {
+    position: absolute;
+    opacity: .3;
+    top: -10px;
+}
+
+.light-right {
+    top: -3px;
+    right: -4px;
+    transform: rotate(20deg);
+}
+
+.light-left {
+    top: -3px;
+    left: -4px;
+    transform: rotate(-20deg);
+}
+
+.card-value {
+    position: absolute;
+    align-self: center;
+    width: 90px;
+    height: auto;
+}
+
+.snow {
+    position: absolute;
+    width: 32px;
+    height: auto;
+    opacity: .2;
+}
+
+.snow-top-left {
+    position: absolute;
+    align-self: flex-start;
+    top: -5px;
+    left: -5px;
+}
+
+.snow-top-right {
+    position: absolute;
+    align-self: flex-start;
+    top: -5px;
+    right: -5px;
+}
+
+.snow-bottom-left {
+    position: absolute;
+    align-self: flex-end;
+    top: 150px;
+    left: -5px;
+}
+
+.snow-bottom-right {
+    position: absolute;
+    align-self: flex-end;
+    top: 150px;
+    right: -5px;
+}
+
+.card-front:hover .snow {
+    animation: spin 4s linear infinite 500ms;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+        opacity: .4;
+    }
+    25% {
+        transform: rotate(90deg);
+        opacity: .6;
+    }
+    50% {
+        transform: rotate(180deg);
+        opacity: .8;
+    }
+    75% {
+        transform: rotate(270deg);
+        opacity: .6;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: .4;
+    }
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        grid-template-columns: repeat(2, auto);
+    }
+    .game-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
